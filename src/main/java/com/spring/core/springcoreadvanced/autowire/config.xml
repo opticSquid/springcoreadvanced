@@ -7,10 +7,10 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-
+	<context:annotation-config/>
 	<bean name="address"
 		class="com.spring.core.springcoreadvanced.autowire.Adrs" p:hno="152"
 		p:city="ambg" p:street="pc sen road" />
 	<bean name="Employee"
-		class="com.spring.core.springcoreadvanced.autowire.Employee" autowire="constructor" />
+		class="com.spring.core.springcoreadvanced.autowire.Employee" />
 </beans>
