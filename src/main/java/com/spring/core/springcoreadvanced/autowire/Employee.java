@@ -10,6 +10,10 @@ public class Employee {
 	 */
 	private Adrs address;
 
+	Employee(Adrs address) {
+		this.address = address;
+	}
+
 	public Adrs getAddress() {
 		return address;
 	}

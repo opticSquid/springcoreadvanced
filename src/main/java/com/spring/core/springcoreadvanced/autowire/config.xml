@@ -12,5 +12,5 @@
 		class="com.spring.core.springcoreadvanced.autowire.Adrs" p:hno="152"
 		p:city="ambg" p:street="pc sen road" />
 	<bean name="Employee"
-		class="com.spring.core.springcoreadvanced.autowire.Employee" autowire="byName" />
+		class="com.spring.core.springcoreadvanced.autowire.Employee" autowire="constructor" />
 </beans>
