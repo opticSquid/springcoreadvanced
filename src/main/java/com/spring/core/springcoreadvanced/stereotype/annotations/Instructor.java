@@ -22,6 +22,16 @@ public class Instructor {
 	private List<String> topics;
 	@Autowired
 	private Profile profile;
+	// Different variations of using passing a boolean value to the @Value
+	// annotation
+	
+//Simple true or false
+	//	@Value("true")
+//If the evaluated value is true the value of variable is true or it is false	
+	//	@Value("#{2+4>5}")
+// Simple ternary operator, you are familiar with it from js
+	@Value("#{2+4>8?true:false}")
+	private boolean active;
 
 	public int getId() {
 		return id;
@@ -47,9 +57,18 @@ public class Instructor {
 		this.profile = profile;
 	}
 
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+
 	@Override
 	public String toString() {
-		return "Instructor [id=" + id + ", name=" + name + ", topics=" + topics + ", profile=" + profile + "]";
+		return "Instructor [id=" + id + ", name=" + name + ", topics=" + topics + ", profile=" + profile + ", active="
+				+ active + "]";
 	}
 
 }
