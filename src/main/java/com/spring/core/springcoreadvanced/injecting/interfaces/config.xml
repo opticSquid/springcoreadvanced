@@ -7,15 +7,7 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-	<bean
-		class="com.spring.core.springcoreadvanced.injecting.interfaces.OrderDAOImpl"
-		name="dao" />
-		<bean
-		class="com.spring.core.springcoreadvanced.injecting.interfaces.OrderDAOImpl2"
-		name="dao2" />
-	<bean
-		class="com.spring.core.springcoreadvanced.injecting.interfaces.OrderBOImpl"
-		name="bo">
-		<property name="dao" ref="dao2" />
-	</bean>
+	<context:component-scan
+		base-package="com.spring.core.springcoreadvanced.injecting.interfaces" />
+
 </beans>
