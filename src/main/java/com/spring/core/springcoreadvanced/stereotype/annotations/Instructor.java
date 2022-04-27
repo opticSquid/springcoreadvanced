@@ -12,8 +12,9 @@ import org.springframework.stereotype.Component;
 @Component("inst")
 @Scope("prototype")
 public class Instructor {
-	// Creating an object of Integer type in this way you can also create an object of a custom class
-	@Value("#{new Integer(88)}")
+	// This is a way to access a static variable in @Value annotation
+	// java.lang.Integer.MIN_VALUE is a constant static variable
+	@Value("#{T(java.lang.Integer).MIN_VALUE}")
 	private int id;
 	@Value("sb")
 	private String name;
