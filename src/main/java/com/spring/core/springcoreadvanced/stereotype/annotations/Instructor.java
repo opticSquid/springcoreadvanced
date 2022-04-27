@@ -12,10 +12,9 @@ import org.springframework.stereotype.Component;
 @Component("inst")
 @Scope("prototype")
 public class Instructor {
-	// Using expressions is done by #{} this indicates
-	// spring that it needs to evaluate this expression to get the value of the variable
-	// In this case it results in 10
-	@Value("#{6+4}")
+	// T(<import path here>) is used to invoke a java inbuilt class or static
+	// methods like an import statement but in an expression
+	@Value("#{T(java.lang.Math).abs(-10)}")
 	private int id;
 	@Value("sb")
 	private String name;
@@ -52,7 +51,5 @@ public class Instructor {
 	public String toString() {
 		return "Instructor [id=" + id + ", name=" + name + ", topics=" + topics + ", profile=" + profile + "]";
 	}
-
-	
 
 }
