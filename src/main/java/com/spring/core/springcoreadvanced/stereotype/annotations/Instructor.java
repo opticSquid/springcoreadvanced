@@ -12,9 +12,10 @@ import org.springframework.stereotype.Component;
 @Component("inst")
 @Scope("prototype")
 public class Instructor {
-	// This annotation value may override the value provided while initializing the
-	// variable so aware of t while using it
-	@Value("10")
+	// Using expressions is done by #{} this indicates
+	// spring that it needs to evaluate this expression to get the value of the variable
+	// In this case it results in 10
+	@Value("#{6+4}")
 	private int id;
 	@Value("sb")
 	private String name;
