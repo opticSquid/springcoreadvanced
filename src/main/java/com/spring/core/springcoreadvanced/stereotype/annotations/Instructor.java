@@ -12,11 +12,11 @@ import org.springframework.stereotype.Component;
 @Component("inst")
 @Scope("prototype")
 public class Instructor {
-	// This is a way to access a static variable in @Value annotation
-	// java.lang.Integer.MIN_VALUE is a constant static variable
 	@Value("#{T(java.lang.Integer).MIN_VALUE}")
 	private int id;
-	@Value("sb")
+	// Here we are using java string methods in expression language
+	// do not forge to enclose the string with single quotes
+	@Value("#{'sb'.toUpperCase()}")
 	private String name;
 	@Value("#{topics}")
 	private List<String> topics;
