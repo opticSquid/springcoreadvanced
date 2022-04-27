@@ -12,9 +12,8 @@ import org.springframework.stereotype.Component;
 @Component("inst")
 @Scope("prototype")
 public class Instructor {
-	// T(<import path here>) is used to invoke a java inbuilt class or static
-	// methods like an import statement but in an expression
-	@Value("#{T(java.lang.Math).abs(-10)}")
+	// Creating an object of Integer type in this way you can also create an object of a custom class
+	@Value("#{new Integer(88)}")
 	private int id;
 	@Value("sb")
 	private String name;
