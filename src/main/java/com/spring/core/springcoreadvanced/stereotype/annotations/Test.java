@@ -10,7 +10,7 @@ public class Test {
 		ctx = new ClassPathXmlApplicationContext("com/spring/core/springcoreadvanced/stereotype/annotations/config.xml");
 		// Spring will by default create the bean with the camel case format where
 		// "Instructor" class name becomes "instructor" bean name
-		Instructor instructor = (Instructor) ctx.getBean("instructor");
+		Instructor instructor = (Instructor) ctx.getBean("inst");
 		System.out.println(instructor);
 	}
 }
