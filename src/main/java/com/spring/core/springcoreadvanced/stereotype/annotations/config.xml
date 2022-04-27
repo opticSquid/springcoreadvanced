@@ -13,4 +13,13 @@
      http://www.springframework.org/schema/util/spring-util.xsd">
 	<context:component-scan
 		base-package="com.spring.core.springcoreadvanced.stereotype.annotations" />
+	<!-- Util schema is used to insert collection type elements in java beans. 
+		For this util schema is imported using smlns:util and the last two URLs Here 
+		we are using linked list which is a collection type element in java
+		id is the variable name used in the class which will hold this value -->
+	<util:list list-class="java.util.LinkedList" id="topics">
+		<value>Java</value>
+		<value>JDBC</value>
+		<value>Java ORM</value>
+	</util:list>
 </beans>
